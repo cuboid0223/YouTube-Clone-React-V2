@@ -1,0 +1,55 @@
+.search-page {
+  flex: 0.8;
+  background-color: #f9f9f9;
+  padding: 20px 20px;
+
+
+  @include pad {
+    flex: 1;
+  }
+
+  &__filter {
+    display: flex;
+    align-items: center;
+    color: #606060;
+    font-size: xx-small !important;
+
+    &>h2 {
+      margin-left: 10px;
+    }
+  }
+
+  &>hr {
+    height: 1px;
+    border: 0;
+    background-color: lightgray;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+.homePage .search-page {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  &__filter {
+    display: none;
+  }
+
+  &>hr {
+    display: none;
+  }
+}
+
+// 在 搜尋頁面結果 中 的 主欄
+.searchPage .search-page{}
+
+
+// 在 detailPage 中 的 側邊欄
+.detailPage .search-page {
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}

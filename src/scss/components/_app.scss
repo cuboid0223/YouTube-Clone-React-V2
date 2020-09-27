@@ -1,0 +1,18 @@
+.app {
+
+
+    &__page {
+        display: flex;
+        overflow: hidden;
+        margin-top: 60px;
+    }
+
+    img,
+    svg {
+        display: block;
+    }
+
+    .link-react-router-dom{
+        text-decoration: none;
+    }
+}
