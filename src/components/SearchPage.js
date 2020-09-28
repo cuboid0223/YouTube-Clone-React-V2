@@ -16,7 +16,8 @@ const SearchPage = ({ videos, onVideoSelect }) => {
         <h2>篩選器</h2>
       </div>
       <hr />
-      {listOfVideos}
+
+      <div className="search-page__listOfVideos">{listOfVideos}</div>
     </div>
   );
 };

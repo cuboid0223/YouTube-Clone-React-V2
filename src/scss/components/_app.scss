@@ -4,7 +4,7 @@
     &__page {
         display: flex;
         overflow: hidden;
-        margin-top: 60px;
+        margin-top: 70px;
     }
 
     img,
@@ -12,7 +12,20 @@
         display: block;
     }
 
-    .link-react-router-dom{
+    .link-react-router-dom {
         text-decoration: none;
+        display: block;
+
+        @include desktop {
+            // width: 25%;
+        }
+
+    }
+
+    .detailPage {
+        @include iphone {
+            display: unset;
+        }
+
     }
 }

@@ -3,7 +3,7 @@
   display: -ms-flexbox;
   display: flex;
   overflow: hidden;
-  margin-top: 60px;
+  margin-top: 70px;
 }
 
 .app img,
@@ -13,6 +13,13 @@
 
 .app .link-react-router-dom {
   text-decoration: none;
+  display: block;
+}
+
+@media (max-width: 568px) {
+  .app .detailPage {
+    display: unset;
+  }
 }
 
 .header {
@@ -26,6 +33,7 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 100%;
+  padding: 5px 20px 5px 20px;
   position: fixed;
   top: 0;
   z-index: 100;
@@ -120,11 +128,16 @@
   -webkit-box-flex: 0.2;
       -ms-flex: 0.2;
           flex: 0.2;
-  height: 100vh;
+  width: 20%;
+  height: 100%;
   overflow-x: hidden;
   overflow-y: scroll;
   background-color: #fff;
+  position: fixed;
+  top: 70px;
+  left: 0;
   z-index: 10;
+  padding-bottom: 60px;
 }
 
 @media (max-width: 767px) {
@@ -133,8 +146,8 @@
     width: 100%;
     -webkit-transform: translateX(-100%);
             transform: translateX(-100%);
-    -webkit-transition: .5s;
-    transition: .5s;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
   }
 }
 
@@ -144,6 +157,12 @@
   background-color: lightgray;
   margin-top: 10px;
   margin-bottom: 10px;
+}
+
+.sidebar > h4 {
+  color: gray;
+  font-size: 13px;
+  padding: 10px 20px;
 }
 
 .sidebar-row {
@@ -200,38 +219,19 @@
           transform: translate(0%);
 }
 
-.recommended-video {
-  -webkit-box-flex: .8;
-      -ms-flex: .8;
-          flex: .8;
-  background-color: #f9f9f9;
-  padding: 40px 20px;
-  padding-bottom: 0;
-}
-
-@media (max-width: 767px) {
-  .recommended-video {
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
-  }
-}
-
-.recommended-video__videos {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+.detailPage .sidebar {
+  display: none;
 }
 
 .video {
-  width: 300px;
+  width: 270px;
   margin-bottom: 40px;
+  margin-left: 10px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 568px) {
   .video {
+    margin-left: 0;
     width: 100%;
   }
 }
@@ -282,6 +282,7 @@
   -webkit-box-flex: 0.8;
       -ms-flex: 0.8;
           flex: 0.8;
+  margin-left: auto;
   background-color: #f9f9f9;
   padding: 20px 20px;
 }
@@ -291,6 +292,7 @@
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
+    padding: 0;
   }
 }
 
@@ -317,6 +319,17 @@
   margin-bottom: 10px;
 }
 
+.search-page__listOfVideos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
 .homePage .search-page {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -333,6 +346,7 @@
   display: none;
 }
 
+.searchPage .search-page,
 .detailPage .search-page {
   width: 100%;
   height: 100vh;
@@ -340,15 +354,51 @@
   overflow-y: scroll;
 }
 
+.detailPage .search-page {
+  -webkit-box-flex: 0.3;
+      -ms-flex: 0.3;
+          flex: 0.3;
+}
+
+.videoDetail {
+  background-color: #f9f9f9 !important;
+  -webkit-box-flex: .7;
+      -ms-flex: .7;
+          flex: .7;
+}
+
+@media (max-width: 767px) {
+  .videoDetail {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 568px) {
+  .videoDetail {
+    margin-top: 70px;
+  }
+}
+
 .videoDetail .MuiGrid-spacing-xs-10 > .MuiGrid-item {
   padding-top: 0px !important;
 }
 
 .videoDetail__video {
-  background-color: #f9f9f9 !important;
-  width: auto;
-  height: 450px;
-  padding: 0 20px 20px 20px !important;
+  width: 100%;
+  margin-top: 20px;
+  height: 400px;
+  padding: 0 20px 20px 20px;
+}
+
+@media (max-width: 568px) {
+  .videoDetail__video {
+    height: 270px;
+    padding: 0;
+    margin-top: 0;
+  }
 }
 
 .videoDetail__info {
@@ -357,9 +407,21 @@
   margin-top: 10px;
 }
 
+@media (max-width: 568px) {
+  .videoDetail__info {
+    padding: 5px;
+  }
+}
+
 .videoDetail__info > h4 {
   font-size: 25px;
   margin-bottom: 1rem;
+}
+
+@media (max-width: 568px) {
+  .videoDetail__info > h4 {
+    font-size: 20px;
+  }
 }
 
 .videoDetail__info > hr {

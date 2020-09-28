@@ -57,16 +57,20 @@ function App() {
           {/* search detail page */}
           <Route path="/searchDetail">
             <div className="app__page detailPage">
-              <VideoDetail video={selectedVideo} />
+              <Sidebar />
+              <VideoDetail video={selectedVideo} /> {/* flex: .7; */}
               <SearchPage videos={videos} onVideoSelect={onVideoSelect} />
+              {/* flex: .3; */}
             </div>
           </Route>
 
           {/* search page */}
-          <Route path="/search/:inputSearch">
+          <Route path='/search'>
             <div className="app__page searchPage">
               <Sidebar />
+              {/* flex: .2; */}
               <SearchPage videos={videos} onVideoSelect={onVideoSelect} />
+              {/* flex: .8; */}
             </div>
           </Route>
 

@@ -1,13 +1,31 @@
 .videoDetail {
+    background-color: #f9f9f9 !important;
+    flex: .7;
+
+    @include pad {
+        flex: 1;
+        margin-top: 40px;
+    }
+
+    @include iphone {
+        margin-top: 70px;
+    }
+
     & .MuiGrid-spacing-xs-10>.MuiGrid-item {
         padding-top: 0px !important;
     }
 
     &__video {
-        background-color: #f9f9f9 !important;
-        width: auto;
-        height: 450px;
-        padding: 0 20px 20px 20px !important;
+        width: 100%;
+        margin-top: 20px;
+        height: 400px;
+        padding: 0 20px 20px 20px;
+
+        @include iphone {
+            height: 270px;
+            padding: 0;
+            margin-top: 0;
+        }
     }
 
     &__info {
@@ -15,9 +33,17 @@
         padding: 20px;
         margin-top: 10px;
 
+        @include iphone {
+            padding: 5px;
+        }
+
         &>h4 {
             font-size: 25px;
             margin-bottom: 1rem;
+
+            @include iphone {
+                font-size: 20px;
+            }
         }
 
         &>hr {
