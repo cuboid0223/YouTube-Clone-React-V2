@@ -38,7 +38,7 @@ function App() {
     const response = await youtube.get("search", {
       params: {
         part: "snippet",
-        maxResults: 10,
+        maxResults: 24,
         key: "AIzaSyB0xTIo8dLxjuYf09JzzvaXdkDG-9y_K9w",
         q: inputSearch,
       },
