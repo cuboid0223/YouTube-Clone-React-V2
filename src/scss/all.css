@@ -27,6 +27,15 @@
   }
 }
 
+.app .MuiButton-root {
+  padding: 0;
+  min-width: 0px;
+}
+
+.app .MuiButton-text {
+  padding: 0;
+}
+
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
