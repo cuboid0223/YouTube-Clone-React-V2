@@ -6,7 +6,7 @@ const VideoDetail = ({ video }) => {
   const videoSrc = `https://www.youtube.com/embed/${video.id.videoId}`;
 
   return (
-    <div className="videoDetail">
+    <div className="videoDetail" id="videoDetail">
       <div className="videoDetail__video">
         <iframe
           frameBorder="0"
@@ -26,9 +26,7 @@ const VideoDetail = ({ video }) => {
           <button>訂閱</button>
         </div>
 
-        <p className="videoDetail__description" >
-          {video.snippet.description}
-        </p>
+        <p className="videoDetail__description">{video.snippet.description}</p>
         <hr />
       </div>
     </div>

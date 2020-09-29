@@ -16,7 +16,7 @@ const Header = ({ onFormSubmit }) => {
   };
 
   return (
-    <div className="header">
+    <div className="header" >
       <div className="header__left">
         <MenuIcon className="burgerIcon" />
         <Link to="/">

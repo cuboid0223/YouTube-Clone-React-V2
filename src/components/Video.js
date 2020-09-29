@@ -1,11 +1,12 @@
 import React from 'react'
 import { Avatar } from "@material-ui/core";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+import { HashLink as Link } from "react-router-hash-link";
 
 const Video = ({ video, onVideoSelect }) => {
   const channelId = video.id.channelId
   return (
-    <Link to="/searchDetail" className="link-react-router-dom">
+    <Link to="/searchDetail#videoDetail" className="link-react-router-dom">
       <div className={`video`} onClick={() => onVideoSelect(video)}>
         <img
           className="video__thumbnail"
