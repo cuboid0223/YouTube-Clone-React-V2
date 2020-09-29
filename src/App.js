@@ -39,7 +39,7 @@ function App() {
       params: {
         part: "snippet",
         maxResults: 24,
-        key: "AIzaSyB0xTIo8dLxjuYf09JzzvaXdkDG-9y_K9w",
+        key: "your API key",
         q: inputSearch,
       },
     });
