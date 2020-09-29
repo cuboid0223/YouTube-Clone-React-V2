@@ -9,6 +9,7 @@
     z-index: 100;
     background-color: #fff;
 
+
     @include iphone {
         justify-content: space-between;
     }
@@ -58,6 +59,7 @@
     &__right {
         display: flex;
         align-items: center;
+        cursor: pointer;
 
         @include iphone {
             display: none !important;

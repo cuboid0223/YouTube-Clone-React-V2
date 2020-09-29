@@ -11,6 +11,11 @@
   display: block;
 }
 
+.app a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .app .link-react-router-dom {
   text-decoration: none;
   display: block;
@@ -112,6 +117,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  cursor: pointer;
 }
 
 @media (max-width: 568px) {
@@ -163,6 +169,31 @@
   color: gray;
   font-size: 13px;
   padding: 10px 20px;
+}
+
+.sidebar__footer {
+  padding: 0 20px;
+}
+
+.sidebar a {
+  font-size: 12px;
+  font-weight: bold;
+  color: lightgray;
+}
+
+.sidebar a + a {
+  margin-left: 10px;
+}
+
+.sidebar__terms {
+  margin-top: 15px;
+}
+
+.sidebar__copyRight {
+  margin-top: auto;
+  padding: 20px;
+  color: #444545;
+  font-size: 12px;
 }
 
 .sidebar-row {

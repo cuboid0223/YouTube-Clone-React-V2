@@ -1,5 +1,5 @@
 import React from "react";
-import  SidebarRow  from "./SidebarRow";
+import SidebarRow from "./SidebarRow";
 import HomeIcon from "@material-ui/icons/Home";
 import WhatshotIcon from "@material-ui/icons/Whatshot";
 import SubscriptionsIcon from "@material-ui/icons/Subscriptions";
@@ -39,6 +39,26 @@ const Sidebar = () => {
       <SidebarRow Icon={FlagIcon} title="檢舉紀錄" />
       <SidebarRow Icon={HelpIcon} title="說明" />
       <SidebarRow Icon={QuestionAnswerIcon} title="提供意見" />
+      <hr />
+      <div className="sidebar__footer">
+        <a href="">關於</a>
+        <a href="">新聞中心</a>
+        <a href="">版權</a>
+        <a href="">與我們聯絡</a>
+        <a href="">創作者</a>
+        <a href="">廣告</a>
+        <a href="">開發人員</a>
+
+        <div className="sidebar__terms">
+          <a href="">條款</a>
+          <a href="">隱私權</a>
+          <a href="">政策與安全性</a>
+          <a href="">YouTube 運作方式</a>
+          <a href="">測試新功能</a>
+        </div>
+      </div>
+
+      <div className="sidebar__copyRight">© 2020 Google LLC</div>
     </div>
   );
 };
