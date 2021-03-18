@@ -1,11 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./scss/all.css";
-import {
-  Header,
-  Sidebar,
-  SearchPage,
-  VideoDetail,
-} from "./components";
+import { Header, Sidebar, SearchPage, VideoDetail } from "./components";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import youtube from "./api/youtube";
 import { useHistory } from "react-router-dom";
@@ -21,8 +16,7 @@ function App() {
   const history = useHistory();
 
   useEffect(() => {
-    handleSubmit("f.nix");
-  
+    handleSubmit("健身");
   }, []);
 
   //  const onVideoSelect = (video) => {
@@ -34,17 +28,19 @@ function App() {
   };
 
   const handleSubmit = async (inputSearch) => {
-   
+    {
+      /* INPUT YOUR API KEY !!!!! */
+    }
     const response = await youtube.get("search", {
       params: {
         part: "snippet",
         maxResults: 24,
-        key: "your API key",
+        key: "AIzaSyB0xTIo8dLxjuYf09JzzvaXdkDG-9y_K9w",
         q: inputSearch,
       },
     });
     console.log("response", response.data.items);
-   
+
     setVideos(response.data.items);
     setSelectedVideo(response.data.items[0]);
   };
@@ -65,7 +61,7 @@ function App() {
           </Route>
 
           {/* search page */}
-          <Route path='/search'>
+          <Route path="/search">
             <div className="app__page searchPage">
               <Sidebar />
               {/* flex: .2; */}
